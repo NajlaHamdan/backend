@@ -15,6 +15,9 @@ app.use("/", registerRouter);
 const logInRouter = require("./router/route/login");
 app.use("/", logInRouter);
 
+const profileRouter = require("./router/route/profile");
+app.use("/", profileRouter);
+
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server is running on ${port}`);

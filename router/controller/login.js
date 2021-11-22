@@ -1,4 +1,3 @@
-const { response } = require("express");
 const registerModel = require("./../../db/models/register");
 
 const logIn = (req, res) => {
@@ -8,8 +7,8 @@ const logIn = (req, res) => {
       $and: [{ password: password }, { email: email }],
     })
     .then((result) => {
-    //   response = { id: result._id };
-     // console.log(result[0]["_id"]);
+      // response = { id: result._id };
+      // console.log(result[0]["_id"]);
       res.json(result[0]["_id"]);
     })
     .catch((err) => res.send(err));
