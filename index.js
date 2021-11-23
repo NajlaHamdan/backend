@@ -18,6 +18,21 @@ app.use("/", logInRouter);
 const profileRouter = require("./router/route/profile");
 app.use("/", profileRouter);
 
+const postMealRouter = require("./router/route/postMeal");
+app.use("/", postMealRouter);
+
+const getMealsRouter = require("./router/route/getMeals");
+app.use("/", getMealsRouter);
+
+const getSweetRouter = require("./router/route/getSweet");
+app.use("/", getSweetRouter);
+
+const getStuffedRouter = require("./router/route/getStuffed");
+app.use("/", getStuffedRouter);
+
+const getDrinkRouter = require("./router/route/getDrink");
+app.use("/", getDrinkRouter);
+
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server is running on ${port}`);

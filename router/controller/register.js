@@ -9,10 +9,13 @@ const register = (req, res) => {
     phoneNumber,
     bDate,
   });
+  // console.log(newUser)
   newUser
     .save()
     .then((result) => res.json(result))
-    .catch((err) => res.send(err));
+    .catch((err) => {
+      console.log(err)
+      res.send(err)});
 };
 
 module.exports = {

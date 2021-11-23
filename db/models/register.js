@@ -8,4 +8,4 @@ const registerSchema = new mongo.Schema({
   bDate: { type: Date, min: "2006-09-28" },
 });
 
-module.exports = mongo.model("register", registerSchema);
+module.exports = mongo.model("Register", registerSchema);
