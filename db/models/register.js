@@ -6,6 +6,7 @@ const registerSchema = new mongo.Schema({
   password: { type: String, required: true },
   phoneNumber: { type: String, required: true },
   bDate: { type: Date, min: "2006-09-28" },
+  mealsList: [{ type: mongo.Schema.Types.ObjectId, ref: "mealSchema" }],
 });
 
 module.exports = mongo.model("Register", registerSchema);

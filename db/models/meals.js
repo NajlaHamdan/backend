@@ -8,6 +8,12 @@ const mealSchema = new mongo.Schema({
   Nopeople: { type: String },
   HowToPrepare: { type: String, required: true },
   Ingredients: { type: String, required: true },
+  userComments: [
+    {
+      value: { type: String },
+      userId: { type: mongo.Schema.Types.ObjectId, ref: "registerSchema" },
+    },
+  ],
 });
 
 module.exports = mongo.model("Meals", mealSchema);
