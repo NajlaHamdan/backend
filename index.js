@@ -33,6 +33,9 @@ app.use("/", getStuffedRouter);
 const getDrinkRouter = require("./router/route/getDrink");
 app.use("/", getDrinkRouter);
 
+const postItemRouter = require("./router/route/postItem");
+app.use("/", postItemRouter);
+app.use("/", postItemRouter);
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server is running on ${port}`);
