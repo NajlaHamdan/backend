@@ -14,11 +14,11 @@ const register = (req, res) => {
     .save()
     .then((result) => {
       // res.json(result)
-       res.json(result["_id"]);
+       res.status(200).json(result["_id"]);
     })
     .catch((err) => {
       console.log(err);
-      res.send(err);
+      res.status(404).send(err);
     });
 };
 

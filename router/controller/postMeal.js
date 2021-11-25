@@ -1,8 +1,15 @@
 const mealsModel = require("./../../db/models/meals");
 
 const postMeal = (req, res) => {
-  const { title, typeOfMeal, src, cookingTime, Nopeople, HowToPrepare, Ingredients } =
-    req.body;
+  const {
+    title,
+    typeOfMeal,
+    src,
+    cookingTime,
+    Nopeople,
+    HowToPrepare,
+    Ingredients,
+  } = req.body;
   const newMeal = new mealsModel({
     title,
     typeOfMeal,
@@ -15,10 +22,11 @@ const postMeal = (req, res) => {
   // console.log(newMeal)
   newMeal
     .save()
-    .then((result) => res.json(result))
+    .then((result) => res.status(200).json(result))
     .catch((err) => {
-      console.log(err)
-      res.json(err)});
+      console.log(err);
+      res.status(404).json(err);
+    });
 };
 
 module.exports = {

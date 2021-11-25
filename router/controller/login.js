@@ -9,9 +9,9 @@ const logIn = (req, res) => {
     .then((result) => {
       // response = { id: result._id };
       // console.log(result[0]["_id"]);
-      res.json(result[0]["_id"]);
+      res.status(200).json(result[0]["_id"]);
     })
-    .catch((err) => res.send(err));
+    .catch((err) => res.status(404).send(err));
 };
 module.exports = {
   logIn,

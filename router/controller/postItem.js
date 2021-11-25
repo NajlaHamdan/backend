@@ -6,7 +6,11 @@ const postItem = (req, res) => {
   res.status(200).json(item);
 };
 const getItem = (req, res) => {
-  res.status(200).json(arrayItem);
+  try {
+    res.status(200).json(arrayItem);
+  } catch {
+    res.status(404);
+  }
 };
 module.exports = {
   postItem,

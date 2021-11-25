@@ -3,8 +3,8 @@ const mealsModel = require("./../../db/models/meals");
 const getMeals = (req, res) => {
   mealsModel
     .find({})
-    .then((result) => res.json(result))
-    .catch((err) => res.json(err));
+    .then((result) => res.status(200).json(result))
+    .catch((err) => res.status(404).json(err));
 };
 
 module.exports = { getMeals };

@@ -4,8 +4,8 @@ const profile = (req, res) => {
   const { id } = req.body;
   registerModel
     .find({ _id: id })
-    .then((result) => res.json(result))
-    .catch((err) => res.json(err));
+    .then((result) => res.status(200).json(result))
+    .catch((err) => res.status(404).json(err));
 };
 
 module.exports = { profile };
