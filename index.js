@@ -36,6 +36,13 @@ app.use("/", getDrinkRouter);
 const postItemRouter = require("./router/route/postItem");
 app.use("/", postItemRouter);
 app.use("/", postItemRouter);
+
+const postCommentRouter = require("./router/route/postComment");
+app.use("/", postCommentRouter);
+
+const getCommentRouter = require("./router/route/getComment");
+app.use("/", getCommentRouter);
+
 const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`server is running on ${port}`);

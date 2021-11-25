@@ -10,3 +10,8 @@ const registerSchema = new mongo.Schema({
 });
 
 module.exports = mongo.model("Register", registerSchema);
+// userName: "kkj",
+//   email: "k@k.com",
+//   password: "ppp",
+//   phoneNumber:000},
+//   bDate: { type: Date, min: "2006-09-28" },

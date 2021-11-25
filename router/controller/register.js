@@ -12,10 +12,14 @@ const register = (req, res) => {
   // console.log(newUser)
   newUser
     .save()
-    .then((result) => res.json(result))
+    .then((result) => {
+      // res.json(result)
+       res.json(result["_id"]);
+    })
     .catch((err) => {
-      console.log(err)
-      res.send(err)});
+      console.log(err);
+      res.send(err);
+    });
 };
 
 module.exports = {
