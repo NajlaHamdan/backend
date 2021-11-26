@@ -15,3 +15,4 @@ mongoose.connect(DB, options).then(
     console.log(err);
   }
 );
+// mongodb+srv://najla:Najla@cluster0.wzqpi.mongodb.net/Cook?retryWrites=true&w=majority
