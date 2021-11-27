@@ -11,7 +11,7 @@ const mealSchema = new mongo.Schema({
   userComments: [
     {
       value: { type: String },
-      userId: { type: mongo.Schema.Types.ObjectId, ref: "Register" },
+      userId: { type: mongo.Schema.Types.ObjectId, ref: "Users" },
     },
   ],
 });

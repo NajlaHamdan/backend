@@ -9,7 +9,7 @@ const registerSchema = new mongo.Schema({
   mealsList: [{ type: mongo.Schema.Types.ObjectId, ref: "Meals" }],
 });
 
-module.exports = mongo.model("Register", registerSchema);
+module.exports = mongo.model("Users", registerSchema);
 // userName: "kkj",
 //   email: "k@k.com",
 //   password: "ppp",
